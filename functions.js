@@ -7,6 +7,10 @@ export function map(arr, callback) {
   return mapArr;
 }
 
-
-
-console.log(map([0, 1, 2], () => {}));
+export function filter(arr, callback) {
+  const filterArr = [];
+  for(let i = 0; i < arr.length; i++) {
+    if(i * 1 === i) filterArr[i] = callback(arr[i]);
+  }
+  return filterArr;
+}
