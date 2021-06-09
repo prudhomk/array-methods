@@ -42,11 +42,13 @@ describe('reduce(arr, callback, initalValue)', () => {
 });
 
 describe('every(arr, callback)', () => {
-  test.only('returns accumulator', () => {
+  test('returns true if all values meet criteria', () => {
     const sample = [4, 8, 16, 20];
-    
+    const sample2 = [0, 2, 4, 6];
     const newArr = every(sample, (num) => {return num >= 4;});
-    expect(newArr).toEqual(true); 
+    const badArr = every(sample2, (num) => {return num >= 2;});
+    expect(newArr).toEqual(true);
+    expect(badArr).toEqual(false); 
   });
       
 });
