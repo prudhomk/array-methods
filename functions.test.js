@@ -33,10 +33,10 @@ describe('findIndex(arr, callback)', () => {
 
 describe('reduce(arr, callback, initalValue)', () => {
   test('returns accumulator', () => {
-    const sample = [0, 1, 2, 3];
+    const sample = [1, 3, 6, 10];
      
-    const newArr = reduce(sample, (num) => {return num + num;}, 0);
-    expect(newArr).toEqual(6); 
+    const newArr = reduce(sample, (num) => {return num;}, 0);
+    expect(newArr).toEqual(20); 
   });
     
 });
